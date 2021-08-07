@@ -7,13 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class MainActivity extends AppCompatActivity {
 
     public Button loginButton;
     public Button createAccountButton;
+    public TextInputEditText user;
+    public TextInputEditText password;
 
-    public String usuario = "admin";
-    public String senha = "admin";
+    public String userAdmin;
 
 
     @Override
@@ -23,11 +26,17 @@ public class MainActivity extends AppCompatActivity {
 
         loginButton = findViewById(R.id.loginButton);
         createAccountButton = findViewById(R.id.GoToCreateAccount);
+        user = findViewById(R.id.inputPhoneText);
+        password = findViewById(R.id.inputPasswordField);
+        userAdmin = user.getText().toString();
 
         loginButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+
+                intent.putExtra("username", userAdmin);
+
                 startActivity(intent);
             }});
 
