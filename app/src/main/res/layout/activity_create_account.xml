@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/greetings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:text="Olá, seja bem vindo\nao Côrtes Villela"
+                    android:textSize="24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/userIcon"
+                    app:layout_constraintEnd_toStartOf="@+id/userIcon"
+                    app:layout_constraintHorizontal_bias="0.513"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/userIcon" />
+
+                <ImageView
+                    android:id="@+id/userIcon"
+                    android:layout_width="101dp"
+                    android:layout_height="81dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="28dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                <!-- Dados Pessoais: -->
+
+                <TextView
+                    android:id="@+id/nameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Nome"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/greetings" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Nome completo"
+                    app:layout_constraintStart_toStartOf="@+id/nameLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/nameLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <TextView
+                    android:id="@+id/CPFLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:text="CPF"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/nameInput" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/CPFInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="CPF"
+                    app:layout_constraintStart_toStartOf="@+id/CPFLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/CPFLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputCPF"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <TextView
+                    android:id="@+id/WhatsAppLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:text="WhatsApp"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/CPFInput" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputWhatsapp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Telefone"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/WhatsAppLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/WhatsAppInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <TextView
+                    android:id="@+id/EmailLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:text="E-mail"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/inputWhatsapp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="E-mail"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/EmailLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/EmailInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <TextView
+                    android:id="@+id/CEPLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:text="CEP"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputCEP"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="CEP"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/CEPLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/CEPInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <TextView
+                    android:id="@+id/StreetLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Rua"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/inputCEP" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputStreet"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Rua"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/StreetLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/StreetInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <TextView
+                    android:id="@+id/HouseNumLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Número"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/inputStreet" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputHouseNum"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Casa"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/HouseNumLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/houseNumInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/AddressLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Bairro"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/HouseNumLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/inputStreet" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputAddress"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Bairro"
+                    app:layout_constraintStart_toEndOf="@+id/HouseNumLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/HouseNumLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addressInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/UsernameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Usuário"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/inputHouseNum" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputUsername"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Nome de Usuário"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/UsernameLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/UsernameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <TextView
+                    android:id="@+id/PasswordCreateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Senha"
+                    android:textSize="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/inputUsername" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Senha"
+                    app:layout_constraintStart_toStartOf="@+id/greetings"
+                    app:layout_constraintTop_toBottomOf="@+id/PasswordCreateLabel">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/PasswordInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/CreateAccountButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:text="Criar conta"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/inputPassword"
+                    android:backgroundTint="@color/dark_blue"
+                    />
+
+
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/CreateAccountButton"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:minHeight="80dp"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
