@@ -1,5 +1,10 @@
 package br.com.isa56.hackathonlabcv.model;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
+
+import br.com.isa56.hackathonlabcv.config.FirebaseConfig;
+
 public class User {
 
     private String id;
@@ -9,6 +14,13 @@ public class User {
     private String type;
 
     public User() {
+    }
+
+    public void save(){
+        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
+        DatabaseReference usuarios = firebaseRef.child( "usuarios" ).child( getId() );
+
+        usuarios.setValue(this);
     }
 
     public String getId() {
@@ -35,6 +47,7 @@ public class User {
         this.email = email;
     }
 
+    @Exclude
     public String getPassword() {
         return password;
     }
@@ -50,4 +63,5 @@ public class User {
     public void setType(String type) {
         this.type = type;
     }
+
 }

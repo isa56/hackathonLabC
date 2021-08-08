@@ -2,6 +2,8 @@ package br.com.isa56.hackathonlabcv.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Switch;
@@ -22,7 +24,6 @@ public class CreateAccountActivity extends AppCompatActivity  {
     private TextInputEditText nameText, emailText, passwordText;
     private Switch choice;
     private FirebaseAuth auth;
-    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,14 +78,28 @@ public class CreateAccountActivity extends AppCompatActivity  {
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
-                    Toast.makeText(CreateAccountActivity.this, "Usuário criado com sucesso", Toast.LENGTH_SHORT).show();
+                    String idUser = task.getResult().getUser().getUid();
+                    user.setId(idUser);
+                    user.save();
+
+                    if(verifyUserType() == "P"){    // Paciente
+                        startActivity(new Intent(CreateAccountActivity.this, MenuPacientActivity.class));
+                        finish();
+                        Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar paciente!", Toast.LENGTH_SHORT).show();
+                    }
+                    else{   // Equipe
+                        startActivity(new Intent(CreateAccountActivity.this, MenuTeamActivity.class));
+                        finish();
+                        Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar membro da equipe!", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
         });
     }
 
     public String verifyUserType(){
-        return choice.isChecked() ? "P": "T";   // P = Paciente, T = Equipe
+        return choice.isChecked() ? "T": "P";   // P = Paciente, T = Equipe
     }
 
 }
