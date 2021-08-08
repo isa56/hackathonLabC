@@ -74,7 +74,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/inputName"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,7 +105,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/inputCPF"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,7 +136,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/WhatsAppInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="phone" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -164,7 +167,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/EmailInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="textWebEmailAddress" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -194,7 +198,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/CEPInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -224,7 +229,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/StreetInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -254,7 +260,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/houseNumInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -284,45 +291,14 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/addressInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-
-
                 <TextView
-                    android:id="@+id/UsernameLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="32dp"
-                    android:text="Usuário"
-                    android:textSize="20dp"
-                    app:layout_constraintStart_toStartOf="@+id/greetings"
-                    app:layout_constraintTop_toBottomOf="@+id/inputHouseNum" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/inputUsername"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="Nome de Usuário"
-                    app:layout_constraintStart_toStartOf="@+id/greetings"
-                    app:layout_constraintTop_toBottomOf="@+id/UsernameLabel">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/UsernameInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-
-                <TextView
-                    android:id="@+id/PasswordCreateLabel"
+                    android:id="@+id/PasswordLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
@@ -330,7 +306,7 @@
                     android:text="Senha"
                     android:textSize="20dp"
                     app:layout_constraintStart_toStartOf="@+id/greetings"
-                    app:layout_constraintTop_toBottomOf="@+id/inputUsername" />
+                    app:layout_constraintTop_toBottomOf="@+id/inputHouseNum" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/inputPassword"
@@ -340,12 +316,14 @@
                     android:layout_marginTop="8dp"
                     android:hint="Senha"
                     app:layout_constraintStart_toStartOf="@+id/greetings"
-                    app:layout_constraintTop_toBottomOf="@+id/PasswordCreateLabel">
+                    app:layout_constraintTop_toBottomOf="@+id/PasswordLabel"
+                    app:passwordToggleEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/PasswordInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -354,16 +332,16 @@
                     android:id="@+id/CreateAccountButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="104dp"
+                    android:backgroundTint="@color/dark_blue"
+                    android:onClick="validateCreateAccount"
+                    android:text="Criar conta"
                     android:textSize="18dp"
                     android:textStyle="bold"
-                    android:text="Criar conta"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.51"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/inputPassword"
-                    android:backgroundTint="@color/dark_blue"
-                    />
-
+                    app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -373,9 +351,21 @@
                     android:layout_marginBottom="32dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.516"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/CreateAccountButton"
+                    app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/messagecreateaccount" />
+
+                <Switch
+                    android:id="@+id/choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="É da equipe do laboratório?"
+                    app:layout_constraintBottom_toTopOf="@+id/CreateAccountButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <ImageView
         android:id="@+id/Logo"
@@ -25,9 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="Nome de usuário"
-        android:labelFor="@id/inputUsername"
-        android:text="Usuário"
+        android:contentDescription="E-Mail"
+        android:labelFor="@id/inputPassword"
+        android:text="E-Mail"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="@+id/inputUsernameField"
         app:layout_constraintTop_toBottomOf="@id/Logo" />
@@ -39,7 +39,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="Nome de usuário"
+        android:hint="E-Mail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/labelUsername"
@@ -74,12 +74,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/labelPassword"
+        app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputPasswordText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

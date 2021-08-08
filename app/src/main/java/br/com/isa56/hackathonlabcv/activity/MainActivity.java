@@ -1,4 +1,4 @@
-package br.com.isa56.hackathonlabcv;
+package br.com.isa56.hackathonlabcv.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,15 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import com.google.android.material.textfield.TextInputEditText;
+import android.widget.Switch;
+import br.com.isa56.hackathonlabcv.R;
 
 public class MainActivity extends AppCompatActivity {
 
     protected Button loginButton;
     protected Button createAccountButton;
     protected String usernameText;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,22 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
         loginButton = findViewById(R.id.loginButton);
         createAccountButton = findViewById(R.id.GoToCreateAccount);
-        usernameText = findViewById(R.id.inputPasswordText).getText().toString();
 
 
         loginButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                if(usernameText != NULL){
+                startActivity(intent);
 
-
-
-                    startActivity(intent);
-                }
-                else{
-                    // Jogar alerta
-                }
             }});
 
         createAccountButton.setOnClickListener(new View.OnClickListener(){

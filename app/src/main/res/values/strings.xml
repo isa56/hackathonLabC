@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">HackathonLabCV</string>
+    <string name="app_name">Hackathon Lab CV</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
