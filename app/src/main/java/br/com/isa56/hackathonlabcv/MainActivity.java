@@ -11,12 +11,9 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    public Button loginButton;
-    public Button createAccountButton;
-    public TextInputEditText user;
-    public TextInputEditText password;
-
-    public String userAdmin;
+    protected Button loginButton;
+    protected Button createAccountButton;
+    protected String usernameText;
 
 
     @Override
@@ -26,18 +23,22 @@ public class MainActivity extends AppCompatActivity {
 
         loginButton = findViewById(R.id.loginButton);
         createAccountButton = findViewById(R.id.GoToCreateAccount);
-        user = findViewById(R.id.inputPhoneText);
-        password = findViewById(R.id.inputPasswordField);
-        userAdmin = user.getText().toString();
+        usernameText = findViewById(R.id.inputPasswordText).getText().toString();
+
 
         loginButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                if(usernameText != NULL){
 
-                intent.putExtra("username", userAdmin);
 
-                startActivity(intent);
+
+                    startActivity(intent);
+                }
+                else{
+                    // Jogar alerta
+                }
             }});
 
         createAccountButton.setOnClickListener(new View.OnClickListener(){

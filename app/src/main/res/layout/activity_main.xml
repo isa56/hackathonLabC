@@ -10,7 +10,7 @@
         android:id="@+id/Logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="600dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,30 +23,30 @@
         android:id="@+id/labelUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="25dp"
-        android:contentDescription="Número de Telefone"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Nome de usuário"
         android:labelFor="@id/inputUsername"
         android:text="Usuário"
-        app:layout_constraintBottom_toTopOf="@+id/inputPhoneField"
-        app:layout_constraintStart_toStartOf="@+id/inputPhoneField"
-        app:layout_constraintTop_toBottomOf="@+id/Logo" />
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/inputUsernameField"
+        app:layout_constraintTop_toBottomOf="@id/Logo" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputPhoneField"
-        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        android:id="@+id/inputUsernameField"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:hint="Nome de usuário"
-        app:layout_constraintBottom_toTopOf="@+id/inputPasswordField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logo">
+        app:layout_constraintTop_toBottomOf="@id/labelUsername"
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputPhoneText"
+            android:id="@+id/inputUsernameText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -57,22 +57,24 @@
         android:id="@+id/labelPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
         android:text="Senha"
-        app:layout_constraintBottom_toTopOf="@+id/inputPasswordField"
-        app:layout_constraintStart_toStartOf="@+id/inputPasswordField" />
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@id/inputPasswordField"
+        app:layout_constraintTop_toBottomOf="@id/inputUsernameField" />
 
     <com.google.android.material.textfield.TextInputLayout
-        app:startIconDrawable="@drawable/ic_baseline_lock_24"
         android:id="@+id/inputPasswordField"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
+        android:layout_marginTop="8dp"
         android:hint="Senha"
-        app:layout_constraintBottom_toTopOf="@+id/loginButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelPassword"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputPasswordText"
@@ -92,25 +94,33 @@
         android:textColor="@color/white"
         android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputPasswordField"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputPasswordField" />
 
     <Button
         android:id="@+id/GoToCreateAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Criar Conta"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/white"
+        android:text="Criar Conta"
         android:textColor="@color/dark_blue"
         android:textSize="16dp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.248" />
+        app:layout_constraintTop_toBottomOf="@+id/GoToCreateAccount"
+        app:srcCompat="@drawable/messagelogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
