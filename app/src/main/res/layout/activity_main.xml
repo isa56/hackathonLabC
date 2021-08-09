@@ -46,7 +46,7 @@
         app:startIconDrawable="@drawable/ic_baseline_person_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputUsernameText"
+            android:id="@+id/inputEmailText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -92,12 +92,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="@color/dark_blue"
+        android:onClick="userLogin"
         android:text="Entrar"
         android:textColor="@color/white"
         android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputPasswordField" />
 
     <Button

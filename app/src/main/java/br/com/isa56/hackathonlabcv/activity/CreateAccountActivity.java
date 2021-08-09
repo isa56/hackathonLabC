@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import br.com.isa56.hackathonlabcv.R;
 import br.com.isa56.hackathonlabcv.config.FirebaseConfig;
+import br.com.isa56.hackathonlabcv.helper.FirebaseUserHelper;
 import br.com.isa56.hackathonlabcv.model.User;
 
 public class CreateAccountActivity extends AppCompatActivity  {
@@ -78,20 +79,47 @@ public class CreateAccountActivity extends AppCompatActivity  {
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()){
-                    String idUser = task.getResult().getUser().getUid();
-                    user.setId(idUser);
-                    user.save();
 
-                    if(verifyUserType() == "P"){    // Paciente
-                        startActivity(new Intent(CreateAccountActivity.this, MenuPacientActivity.class));
-                        finish();
-                        Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar paciente!", Toast.LENGTH_SHORT).show();
+                    try {
+                        String idUser = task.getResult().getUser().getUid();
+                        user.setId(idUser);
+                        user.save();
+
+                        FirebaseUserHelper.updateUserName(user.getName());
+
+                        if (verifyUserType() == "P") {    // Paciente
+                            startActivity(new Intent(CreateAccountActivity.this, MenuPacientActivity.class));
+                            finish();
+                            Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar paciente!", Toast.LENGTH_SHORT).show();
+                        } else {   // Equipe
+                            startActivity(new Intent(CreateAccountActivity.this, MenuTeamActivity.class));
+                            finish();
+                            Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar membro da equipe!", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                    else{   // Equipe
-                        startActivity(new Intent(CreateAccountActivity.this, MenuTeamActivity.class));
-                        finish();
-                        Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar membro da equipe!", Toast.LENGTH_SHORT).show();
+                    catch (Exception e){
+                        e.printStackTrace();
                     }
+
+                }
+                else{
+                    String excep = "";
+                    try {
+                        throw task.getException();
+                    }catch ( FirebaseAuthWeakPasswordException e){
+                        excecao = "Digite uma senha mais forte!";
+                    }catch ( FirebaseAuthInvalidCredentialsException e){
+                        excecao= "Por favor, digite um e-mail válido";
+                    }catch ( FirebaseAuthUserCollisionException e){
+                        excecao = "Este conta já foi cadastrada";
+                    }catch (Exception e){
+                        excep = "Erro ao cadastrar usuário: "  + e.getMessage();
+                        e.printStackTrace();
+                    }
+
+                    Toast.makeText(CadastroActivity.this,
+                            excep,
+                            Toast.LENGTH_SHORT).show();
 
                 }
             }
