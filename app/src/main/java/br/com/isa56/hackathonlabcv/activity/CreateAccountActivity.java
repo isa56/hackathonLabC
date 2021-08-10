@@ -92,7 +92,7 @@ public class CreateAccountActivity extends AppCompatActivity  {
                             finish();
                             Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar paciente!", Toast.LENGTH_SHORT).show();
                         } else {   // Equipe
-                            startActivity(new Intent(CreateAccountActivity.this, MenuTeamActivity.class));
+                            startActivity(new Intent(CreateAccountActivity.this, MenuCollectorActivity.class));
                             finish();
                             Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar membro da equipe!", Toast.LENGTH_SHORT).show();
                         }

@@ -6,13 +6,95 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/greetingsPacientName"
+        android:layout_width="184dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:text="Olá! Bem vindo ao Côrtes Villela."
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="149dp"
+        android:layout_height="53dp"
+        android:text="Em que posso lhe ajudar?"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greetingsPacientName" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="105dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/illustrationwelcome" />
+
+    <Button
+        android:id="@+id/examResultButton"
+        android:layout_width="132dp"
+        android:layout_height="114dp"
+        android:backgroundTint="@color/vivid_dark_blue"
+        android:text="Resultado de Exame"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/examPlaceSchedule"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/examPlaceSchedule" />
+
+    <Button
+        android:id="@+id/examPlaceSchedule"
+        android:layout_width="132dp"
+        android:layout_height="114dp"
+        android:text="Agendar Exame Presencial"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/HomeExamGPS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/examResultButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/examHomeSchedule"
+        android:layout_width="132dp"
+        android:layout_height="114dp"
+        android:backgroundTint="@color/vivid_light_blue"
+        android:text="Agendar Exame Domiciliar"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/HomeExamGPS"
+        app:layout_constraintEnd_toStartOf="@+id/HomeExamGPS"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/HomeExamGPS"
+        android:layout_width="132dp"
+        android:layout_height="114dp"
+        android:backgroundTint="@color/salmon"
+        android:text="Acompanhar Exame Domiciliar"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/examHomeSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/examPlaceSchedule" />
+
+    <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="20dp"
+        android:layout_marginTop="-16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logolabc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -74,10 +74,12 @@ public class MainActivity extends AppCompatActivity {
                     if(!task.isSuccessful()) {
 
                         if(user.getType() == "P"){  // Paciente
-
+                            Intent intent = new Intent(MainActivity.this, MenuPacientActivity.class);
+                            startActivity(intent);
                         }
                         else{   // Equipe
-
+                            Intent intent = new Intent(MainActivity.this, MenuCollectorActivity.class);
+                            startActivity(intent);
                         }
 
                     }
