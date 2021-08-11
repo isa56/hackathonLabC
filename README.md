@@ -1,5 +1,4 @@
-
-# <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\institucional\logoativo.png" alt="Logo Laboratório Côrtes Villela Simples" style="zoom:5%;" /> Hackathon Laboratório Côrtes Villela
+# <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/institucional/logoativo.png" alt="Logo Laboratório Côrtes Villela Simples" style="zoom:5%;" /> Hackathon Laboratório Côrtes Villela
 
 Agosto/2021.
 
@@ -41,28 +40,33 @@ Devido ao curto tempo disponível, não será possível que todas as funções s
 
 ## Como utilizar?
 
-1. Em um celular Android 8.0 ou acima, instale o arquivo [apk]() disponível para [download](). Se não sabe instalar, [este guia pode te ajudar](https://www.techtudo.com.br/dicas-e-tutoriais/2018/10/como-instalar-apk-no-android.ghtml).
+1. Em um celular Android 8.0 ou acima, abra o arquivo [LabCHackathonCheetah.apk](https://github.com/isa56/hackathonLabC/blob/main/docshackathon/LabCHackathonCheetah.apk) disponível no [link](https://github.com/isa56/hackathonLabC/blob/main/docshackathon/LabCHackathonCheetah.apk) para e clique em Download.
+2. Instale em seu celular Android. Se não sabe instalar, [este guia pode te ajudar](https://www.techtudo.com.br/dicas-e-tutoriais/2018/10/como-instalar-apk-no-android.ghtml).
    * O aplicativo é completamente seguro, não há nenhum tipo de vírus. As únicas bibliotecas utilizadas são do próprio [Android](https://developer.android.com/?hl=pt-br), do [Firebase](https://firebase.google.com/?hl=pt) e do [Material Design](https://material.io/).
-2. Faça registro e entre em sua conta.
-3. Aproveite!
+3. Faça registro e entre em sua conta.
+4. Quaisquer dúvidas podem ser enviadas para [isadorafer56@gmail.com](mailto:isadorafer56@gmail.com?Subject=Duvida%20sobre%20o%20projeto%20Hackathon%20LabC%20da%20Equipe%20Cheetah).
 
 *Observações:*
 
 * As telas que não estiverem terminadas terão um aviso (estarão em Mockup).
+
 * Nem todas as funcionalidades estão disponíveis.
-* Foram criadas contas padrão para login:
+
+* Foram criadas contas padrão para login, mas outras podem ser criadas:
+
   * Paciente:
-    * E-mail (não funcional): paciente@gmail.com
+    * E-mail (não existe de verdade): paciente@gmail.com
     * Senha: paciente
   * Coletor:
-    * E-mail (não funcional): coletor@gmail.com
+    * E-mail (não existe de verdade): coletor@gmail.com
     * Senha: coletor
   * Gestor:
-    * E-mail (não funcional): adminteste@gmail.com
-    
+    * E-mail (não existe de verdade): adminteste@gmail.com
     * Senha: admin1122
-    
-      
+
+* O banco de dados está on-line na conta de [Isadora Gonçalves Ferreira](mailto:isadorafer56@gmail.com?Subject=Duvida%20sobre%20o%20projeto%20Hackathon%20LabC%20da%20Equipe%20Cheetah). Para quaisquer dúvidas ou liberação de acesso, mandar e-mail.
+
+  
 
 ## Partes funcionais:
 
@@ -75,49 +79,55 @@ Devido ao curto tempo disponível, não será possível que todas as funções s
 
 * Tela de Login:
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\01login.png" alt="Tela de Login" style="zoom: 15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/01login.png" alt="Tela de Login" style="zoom: 15%;" />
 
 * Tela para Criar Conta:
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\02criarconta.png" alt="Tela para Criar Conta" style="zoom:15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/02criarconta.png" alt="Tela para Criar Conta" style="zoom:15%;" />
 
 * Tela de Menu - Paciente:
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\03pacientemenu.png" alt="Tela de Menu - Paciente" style="zoom:15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/03pacientemenu.png" alt="Tela de Menu - Paciente" style="zoom:15%;" />
 
 * Tela de Resultados - Paciente:
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\04pacienteresultados.png" alt="Tela de Resultados - Paciente" style="zoom:15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/04pacienteresultados.png" alt="Tela de Resultados - Paciente" style="zoom:15%;" />
 
 * Tela de Marcação de Exames - Paciente:
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\05agendar1.png" alt="Tela de Marcação de Exames - Paciente 1" style="zoom:15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/05agendar1.png" alt="Tela de Marcação de Exames - Paciente 1" style="zoom:15%;" />
 
   
 
   
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\06agendar2.png" alt="Tela de Marcação de Exames - Paciente 2" style="zoom:15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/06agendar2.png" alt="Tela de Marcação de Exames - Paciente 2" style="zoom:15%;" />
 
 * Tela de Acompanhamento do Coletor - Paciente:
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\10gestordados.png" alt="Tela de Acompanhamento do Coletor - Paciente" style="zoom:15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/10gestordados.png" alt="Tela de Acompanhamento do Coletor - Paciente" style="zoom:15%;" />
 
 * Tela de Menu - Coletor:
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\07coletormenu.png" alt="Tela de Menu - Coletor" style="zoom:15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/07coletormenu.png" alt="Tela de Menu - Coletor" style="zoom:15%;" />
 
 * Tela de Dados - Coletor:
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\08coletordados.png" alt="Tela de Dados - Coletor" style="zoom:15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/08coletordados.png" alt="Tela de Dados - Coletor" style="zoom:15%;" />
 
 * Tela de Menu - Gestor:
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\09gestormenu.png" alt="Tela de Menu - Gestor" style="zoom:15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/09gestormenu.png" alt="Tela de Menu - Gestor" style="zoom:15%;" />
 
 * Tela de Dados - Gestor:
 
-  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\10gestordados.png" alt="Tela de Dados - Gestor" style="zoom:15%;" />
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/10gestordados.png" alt="Tela de Dados - Gestor" style="zoom:15%;" />
+
+  
+
+* Banco de Dados:
+
+  <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/11bancodedados.png" alt="Banco de Dados" style="zoom:15%;" />
 
   
 
@@ -137,5 +147,5 @@ Grupo formado aleatoriamente no Hackathon. Nenhum dos participantes se conhecia 
 
 * Negócios: Leonardo Frossard.
 
-  ![Logo Laboratório Côrtes Villela Grande](C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\institucional\logolabc.png)
+  ![Logo Laboratório Côrtes Villela Grande](https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/institucional/logolabc.png)
 
