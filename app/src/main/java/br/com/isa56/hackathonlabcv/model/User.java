@@ -17,10 +17,10 @@ public class User {
     }
 
     public void save(){
-        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
-        DatabaseReference usuarios = firebaseRef.child( "usuarios" ).child( getId() );
+        DatabaseReference firebaseRef = FirebaseConfig.getFirebaseDatabase();
+        DatabaseReference users = firebaseRef.child( "users" ).child( getId() );
 
-        usuarios.setValue(this);
+        users.setValue(this);
     }
 
     public String getId() {

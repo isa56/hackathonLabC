@@ -92,7 +92,6 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-
                 <TextView
                     android:id="@+id/CPFLabel"
                     android:layout_width="wrap_content"
@@ -121,7 +120,6 @@
                         android:inputType="number" />
 
                 </com.google.android.material.textfield.TextInputLayout>
-
 
 
                 <TextView
@@ -154,7 +152,6 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-
                 <TextView
                     android:id="@+id/EmailLabel"
                     android:layout_width="wrap_content"
@@ -183,7 +180,6 @@
                         android:inputType="textWebEmailAddress" />
 
                 </com.google.android.material.textfield.TextInputLayout>
-
 
 
                 <TextView
@@ -216,7 +212,6 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-
                 <TextView
                     android:id="@+id/StreetLabel"
                     android:layout_width="wrap_content"
@@ -245,7 +240,6 @@
                         android:inputType="text" />
 
                 </com.google.android.material.textfield.TextInputLayout>
-
 
 
                 <TextView
@@ -344,7 +338,7 @@
                     android:id="@+id/CreateAccountButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="104dp"
+                    android:layout_marginTop="110dp"
                     android:backgroundTint="@color/dark_blue"
                     android:onClick="validateCreateAccount"
                     android:text="Criar conta"
@@ -369,15 +363,40 @@
                     app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/messagecreateaccount" />
 
-                <Switch
-                    android:id="@+id/choice"
+                <CheckBox
+                    android:id="@+id/pacientCheckBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="É da equipe do laboratório?"
+                    android:text="Paciente"
                     app:layout_constraintBottom_toTopOf="@+id/CreateAccountButton"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/collectorCheckbox"
+                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+
+                <CheckBox
+                    android:id="@+id/collectorCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coletor"
+                    app:layout_constraintBottom_toTopOf="@+id/CreateAccountButton"
+                    app:layout_constraintEnd_toStartOf="@+id/adminCheckbox"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pacientCheckBox"
+                    app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+                    app:layout_constraintVertical_bias="0.507" />
+
+                <CheckBox
+                    android:id="@+id/adminCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gestor"
+                    app:layout_constraintBottom_toTopOf="@+id/CreateAccountButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/collectorCheckbox"
+                    app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+                    app:layout_constraintVertical_bias="0.507" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

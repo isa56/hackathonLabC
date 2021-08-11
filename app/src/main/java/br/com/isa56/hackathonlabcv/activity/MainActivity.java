@@ -14,9 +14,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 import br.com.isa56.hackathonlabcv.R;
 import br.com.isa56.hackathonlabcv.config.FirebaseConfig;
+import br.com.isa56.hackathonlabcv.helper.FirebaseUserHelper;
 import br.com.isa56.hackathonlabcv.model.User;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +43,23 @@ public class MainActivity extends AppCompatActivity {
         emailText = findViewById(R.id.inputEmailText);
         passwordText = findViewById(R.id.inputPasswordText);
 
-        public void userLogin(View view){
+        createAccountButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CreateAccountActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+/*
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUserHelper.RedirectLoggedUser(MainActivity.this);
+    }
+*/
+    public void userLogin(View view){
             String textEmail = emailText.getText().toString();
             String textPassword = passwordText.getText().toString();
 
@@ -49,9 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     User user = new User();
                     user.setEmail(textEmail);
                     user.setPassword(textPassword);
-
                     logUser(user);
-
                 }
                 else{
                     Toast.makeText(MainActivity.this, "Preencha a senha!", Toast.LENGTH_SHORT).show();
@@ -61,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             else{
                 Toast.makeText(MainActivity.this, "Preencha o e-mail!", Toast.LENGTH_SHORT).show();
             }
+
         }
 
         public void logUser(User user){
@@ -69,18 +88,12 @@ public class MainActivity extends AppCompatActivity {
                     user.getEmail(),
                     user.getPassword()
             ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(!task.isSuccessful()) {
 
-                        if(user.getType() == "P"){  // Paciente
-                            Intent intent = new Intent(MainActivity.this, MenuPacientActivity.class);
-                            startActivity(intent);
-                        }
-                        else{   // Equipe
-                            Intent intent = new Intent(MainActivity.this, MenuCollectorActivity.class);
-                            startActivity(intent);
-                        }
+                        FirebaseUserHelper.RedirectLoggedUser(MainActivity.this);
 
                     }
                     else{
@@ -89,17 +102,17 @@ public class MainActivity extends AppCompatActivity {
                         try {
                             throw task.getException();
                         }catch ( FirebaseAuthWeakPasswordException e){
-                            excecao = "Digite uma senha mais forte!";
+                            excep = "Digite uma senha mais forte!";
                         }catch ( FirebaseAuthInvalidCredentialsException e){
-                            excecao= "Por favor, digite um e-mail válido";
+                            excep = "Por favor, digite um e-mail válido";
                         }catch ( FirebaseAuthUserCollisionException e){
-                            excecao = "Este conta já foi cadastrada";
+                            excep = "Este conta já foi cadastrada";
                         }catch (Exception e){
                             excep = "Erro ao cadastrar usuário: "  + e.getMessage();
                             e.printStackTrace();
                         }
 
-                        Toast.makeText(CadastroActivity.this,
+                        Toast.makeText(MainActivity.this,
                                 excep,
                                 Toast.LENGTH_SHORT).show();
                     }
@@ -108,13 +121,6 @@ public class MainActivity extends AppCompatActivity {
         }
         
 
-        createAccountButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CreateAccountActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
+
 
 }

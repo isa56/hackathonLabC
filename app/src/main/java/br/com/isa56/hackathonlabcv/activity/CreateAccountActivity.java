@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Switch;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -14,17 +14,26 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+
 
 import br.com.isa56.hackathonlabcv.R;
+import br.com.isa56.hackathonlabcv.activity.admin.MenuAdminActivity;
+import br.com.isa56.hackathonlabcv.activity.collector.MenuCollectorActivity;
+import br.com.isa56.hackathonlabcv.activity.patient.MenuPatientActivity;
 import br.com.isa56.hackathonlabcv.config.FirebaseConfig;
 import br.com.isa56.hackathonlabcv.helper.FirebaseUserHelper;
 import br.com.isa56.hackathonlabcv.model.User;
 
+
+
 public class CreateAccountActivity extends AppCompatActivity  {
 
     private TextInputEditText nameText, emailText, passwordText;
-    private Switch choice;
     private FirebaseAuth auth;
+    private CheckBox pacientCheck, collectorCheck, adminCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +43,9 @@ public class CreateAccountActivity extends AppCompatActivity  {
         nameText = findViewById(R.id.inputName);
         emailText = findViewById(R.id.EmailInput);
         passwordText = findViewById(R.id.PasswordInput);
-        choice = findViewById(R.id.choice);
+        pacientCheck = findViewById(R.id.pacientCheckBox);
+        collectorCheck = findViewById(R.id.collectorCheckbox);
+        adminCheck = findViewById(R.id.adminCheckbox);
 
     }
 
@@ -88,13 +99,17 @@ public class CreateAccountActivity extends AppCompatActivity  {
                         FirebaseUserHelper.updateUserName(user.getName());
 
                         if (verifyUserType() == "P") {    // Paciente
-                            startActivity(new Intent(CreateAccountActivity.this, MenuPacientActivity.class));
+                            startActivity(new Intent(CreateAccountActivity.this, MenuPatientActivity.class));
                             finish();
                             Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar paciente!", Toast.LENGTH_SHORT).show();
-                        } else {   // Equipe
+                        } else if (verifyUserType() == "C") {   // Coletor
                             startActivity(new Intent(CreateAccountActivity.this, MenuCollectorActivity.class));
                             finish();
-                            Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar membro da equipe!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar coletor!", Toast.LENGTH_SHORT).show();
+                        } else if (verifyUserType() == "A"){
+                            startActivity(new Intent(CreateAccountActivity.this, MenuAdminActivity.class));
+                            finish();
+                            Toast.makeText(CreateAccountActivity.this, "Sucesso ao cadastrar gestor!", Toast.LENGTH_SHORT).show();
                         }
                     }
                     catch (Exception e){
@@ -107,17 +122,17 @@ public class CreateAccountActivity extends AppCompatActivity  {
                     try {
                         throw task.getException();
                     }catch ( FirebaseAuthWeakPasswordException e){
-                        excecao = "Digite uma senha mais forte!";
+                        excep = "Digite uma senha mais forte!";
                     }catch ( FirebaseAuthInvalidCredentialsException e){
-                        excecao= "Por favor, digite um e-mail válido";
+                        excep= "Por favor, digite um e-mail válido";
                     }catch ( FirebaseAuthUserCollisionException e){
-                        excecao = "Este conta já foi cadastrada";
+                        excep = "Este conta já foi cadastrada";
                     }catch (Exception e){
                         excep = "Erro ao cadastrar usuário: "  + e.getMessage();
                         e.printStackTrace();
                     }
 
-                    Toast.makeText(CadastroActivity.this,
+                    Toast.makeText(CreateAccountActivity.this,
                             excep,
                             Toast.LENGTH_SHORT).show();
 
@@ -127,7 +142,14 @@ public class CreateAccountActivity extends AppCompatActivity  {
     }
 
     public String verifyUserType(){
-        return choice.isChecked() ? "T": "P";   // P = Paciente, T = Equipe
+        if(pacientCheck.isChecked()){
+            return "P";
+        }
+        else if(collectorCheck.isChecked()){
+            return "C";
+        }
+        else
+            return "A";
     }
 
 }

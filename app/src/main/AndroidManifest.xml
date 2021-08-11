@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.isa56.hackathonlabcv">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -16,7 +15,6 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.HackathonLabCV">
-
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -29,10 +27,14 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <!-- Map: -->
+
         <activity
             android:name=".activity.MapsActivity"
             android:exported="true"
-            android:label="@string/title_activity_maps"/>
+            android:label="@string/title_activity_maps" />
+
+        <!-- Login and Create Account: -->
 
         <activity android:name=".activity.MainActivity">
             <intent-filter>
@@ -40,12 +42,53 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.CreateAccountActivity"
+            android:parentActivityName=".activity.MainActivity" />
 
-        <activity android:name=".activity.CreateAccountActivity"
-            android:parentActivityName=".activity.MainActivity"/>
+        <!-- Patient-related: -->
 
-        <activity android:name=".activity.MenuPacientActivity"
-            android:parentActivityName=".activity.MainActivity"/>
+        <activity
+            android:name=".activity.patient.MenuPatientActivity"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.patient.ExamResultsActivity"
+            android:parentActivityName=".activity.patient.MenuPatientActivity" />
+
+        <activity
+            android:name=".activity.patient.FollowHomeExamPatient"
+            android:parentActivityName=".activity.patient.MenuPatientActivity" />
+
+        <activity
+            android:name=".activity.patient.ScheduleClinicExam"
+            android:parentActivityName=".activity.patient.MenuPatientActivity" />
+
+        <activity
+            android:name=".activity.patient.ScheduleHomeExam"
+            android:parentActivityName=".activity.patient.MenuPatientActivity" />
+
+        <!-- Collector-related: -->
+
+        <activity
+            android:name=".activity.collector.MenuCollectorActivity"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.collector.CollectorDataActivity"
+            android:parentActivityName=".activity.collector.MenuCollectorActivity" />
+
+        <!-- Admin-related: -->
+
+        <activity
+            android:name=".activity.admin.MenuAdminActivity"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.admin.AdminDataActivity"
+            android:parentActivityName=".activity.admin.MenuAdminActivity" />
+
+
     </application>
 
 </manifest>
