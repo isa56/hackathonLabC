@@ -77,7 +77,6 @@ public class CreateAccountActivity extends AppCompatActivity  {
         else{
             Toast.makeText(CreateAccountActivity.this, "Preencha todos os dados!", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     public void saveUser(User user){

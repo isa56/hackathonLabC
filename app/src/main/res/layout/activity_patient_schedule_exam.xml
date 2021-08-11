@@ -1,6 +1,395 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView
+        android:id="@+id/scviewagain2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Logo: -->
+                <ImageView
+                    android:id="@+id/logoLabSchEx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/logolabc" />
+
+                <!-- Orientações: -->
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="153dp"
+                    android:layout_height="187dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logoLabSchEx"
+                    app:srcCompat="@drawable/illustrationwelcome" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="200dp"
+                    android:layout_height="75dp"
+                    android:text="Agende um exame no laboratório."
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                    app:layout_constraintHorizontal_bias="0.615"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView7"
+                    app:layout_constraintVertical_bias="0.285" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="178dp"
+                    android:layout_height="66dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Só precisamos de alguns dados!"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <!-- Formulário: -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/exNameInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="370dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:hint="Nome completo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/exInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ExCPFInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="370dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:hint="CPF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exNameInput">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/exInputCPF"
+                        android:layout_width="match_parent"
+                        android:layout_height="67dp"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/exAddressInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="230dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:hint="Bairro"
+                    app:layout_constraintStart_toStartOf="@+id/ExCPFInput"
+                    app:layout_constraintTop_toBottomOf="@+id/ExCPFInput">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/exInputAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/exHouseNumInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="116dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:hint="Número"
+                    app:layout_constraintEnd_toEndOf="@+id/ExCPFInput"
+                    app:layout_constraintTop_toBottomOf="@+id/ExCPFInput">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/exInputHouseNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/exStreetInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="370dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:hint="Rua e Complemento"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exAddressInput">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/exInputStreet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/exCEPInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="370dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:hint="CEP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exStreetInput">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/exInputCEP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Switch
+                    android:id="@+id/exPlanOrInsuranceSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:scrollbarSize="8dp"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exExamSpinner" />
+
+                <TextView
+                    android:id="@+id/selfLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Particular"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/exPlanOrInsuranceSwitch"
+                    app:layout_constraintEnd_toStartOf="@+id/exPlanOrInsuranceSwitch"
+                    app:layout_constraintTop_toTopOf="@+id/exPlanOrInsuranceSwitch" />
+
+                <Spinner
+                    android:id="@+id/exExamSpinner"
+                    android:layout_width="370dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exCEPInput"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/insuranceLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Convênio"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/exPlanOrInsuranceSwitch"
+                    app:layout_constraintStart_toEndOf="@+id/exPlanOrInsuranceSwitch"
+                    app:layout_constraintTop_toTopOf="@+id/exPlanOrInsuranceSwitch" />
+
+                <Spinner
+                    android:id="@+id/exInsuranceSpinner"
+                    android:layout_width="370dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="32dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exPlanOrInsuranceSwitch"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/exInsuranceIdInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="370dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:hint="Carteirinha do Convênio"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exInsuranceSpinner">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/homeInputInsuranceId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Switch
+                    android:id="@+id/exGuiderSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:scrollbarSize="8dp"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exInsuranceIdInput" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Não possui"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/exGuiderSwitch"
+                    app:layout_constraintEnd_toStartOf="@+id/exGuiderSwitch"
+                    app:layout_constraintTop_toTopOf="@+id/exGuiderSwitch" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Possui Guia Médica"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/exGuiderSwitch"
+                    app:layout_constraintStart_toEndOf="@+id/exGuiderSwitch"
+                    app:layout_constraintTop_toTopOf="@+id/exGuiderSwitch" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/exInsuranceGuideInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="370dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="32dp"
+                    android:hint="Código da Guia Médica"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exGuiderSwitch">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/exInputInsuranceGuide"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/exInputPhone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="370dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:hint="Telefone para contato"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exInsuranceGuideInput">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/exPhoneinput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/exInputDate"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:hint="Data"
+                    app:layout_constraintStart_toStartOf="@+id/exInputPhone"
+                    app:layout_constraintTop_toBottomOf="@+id/exInputPhone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/exDateInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/exTimeInput"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="146dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
+                    android:hint="Intervalo"
+                    app:layout_constraintEnd_toEndOf="@+id/exInputPhone"
+                    app:layout_constraintTop_toBottomOf="@+id/exInputPhone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/exInputTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/exConfirmScheduleButton"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginBottom="64dp"
+                    android:text="Confirmar Agendamento"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/exTimeInput" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

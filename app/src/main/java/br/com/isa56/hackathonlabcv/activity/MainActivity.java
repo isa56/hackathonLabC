@@ -97,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                     else{
-
                         String excep = "";
                         try {
                             throw task.getException();

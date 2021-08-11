@@ -61,6 +61,7 @@ Devido ao curto tempo disponível, não será possível que todas as funções s
 * Activities (telas) e chamadas para activities (telas);
 * Cadastro e login;
 * Sincronização do cadastro e login com banco de dados (Firebase Realtime Database);
+  * Para fins de demonstração e segurança, os únicos dados armazenados no momento são nome, e-mail e senha.
 * ~~Atualização da posição por botão do coletor para o usuário e gestor;~~
 * ~~Envio de notificações ao se aproximar do local do usuário;~~
 * ~~Sincronização da marcação de exames com banco de dados (Firebase Realtime Database);~~
