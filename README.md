@@ -37,7 +37,8 @@ Devido ao curto tempo disponível, não será possível que todas as funções s
 
 ## Como utilizar?
 
-1. Em um celular Android, instale o arquivo (apk)[] disponível para (download)[].
+1. Em um celular Android, instale o arquivo [apk]() disponível para [download](). Se não sabe instalar, [este guia pode te ajudar](https://www.techtudo.com.br/dicas-e-tutoriais/2018/10/como-instalar-apk-no-android.ghtml).
+   * O aplicativo é completamente seguro, não há nenhum tipo de vírus. As únicas bibliotecas utilizadas são do próprio [Android](https://developer.android.com/?hl=pt-br), do [Firebase](https://firebase.google.com/?hl=pt) e do [Material Design](https://material.io/).
 2. Faça registro e entre em sua conta.
 3. Aproveite!
 
@@ -74,5 +75,9 @@ Grupo formado aleatoriamente no Hackathon. Nenhum dos participantes se conhecia 
 * **Desenvolvimento:** [Isadora Gonçalves Ferreira](https://www.linkedin.com/in/isadorafer/);
 * **Negócios:** [João Anjos](https://www.linkedin.com/in/joão-lucas-dos-anjos-9828b1193).
 
-## 
+### Mentores:
+
+* UX Design: João Torman;
+* Desenvolvimento: Leandro Wong;
+* Negócios: Leonardo Frossard.
 

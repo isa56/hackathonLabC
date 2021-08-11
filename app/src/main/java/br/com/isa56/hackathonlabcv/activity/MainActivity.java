@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -15,6 +16,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected String usernameText;
     private TextInputEditText emailText, passwordText;
 
-    private FirebaseAuth auth;
+    public FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         emailText = findViewById(R.id.inputEmailText);
         passwordText = findViewById(R.id.inputPasswordText);
 
+        auth = FirebaseConfig.getFirebaseAuth();
+
         createAccountButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -52,19 +56,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-/*
-    @Override
+/*    @Override
     protected void onStart() {
         super.onStart();
         FirebaseUserHelper.RedirectLoggedUser(MainActivity.this);
-    }
-*/
+    }*/
+
     public void userLogin(View view){
             String textEmail = emailText.getText().toString();
             String textPassword = passwordText.getText().toString();
+            // OK
 
             if(!textEmail.isEmpty()){
-
                 if(!textPassword.isEmpty()){
                     User user = new User();
                     user.setEmail(textEmail);
@@ -82,37 +85,38 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        public void logUser(User user){
-            auth = FirebaseConfig.getFirebaseAuth();
-            auth.signInWithEmailAndPassword(
-                    user.getEmail(),
-                    user.getPassword()
-            ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        public void logUser(User user) {
 
+            auth = FirebaseConfig.getFirebaseAuth();
+
+            // user chega aqui com e-mail e senha
+
+            auth.signInWithEmailAndPassword(
+                    user.getEmail(), user.getPassword()
+            ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(!task.isSuccessful()) {
-
+                    if (task.isSuccessful()) {
                         FirebaseUserHelper.RedirectLoggedUser(MainActivity.this);
-
                     }
-                    else{
-                        String excep = "";
+                    else {
+                        String ex = "";
                         try {
                             throw task.getException();
-                        }catch ( FirebaseAuthWeakPasswordException e){
-                            excep = "Digite uma senha mais forte!";
-                        }catch ( FirebaseAuthInvalidCredentialsException e){
-                            excep = "Por favor, digite um e-mail válido";
-                        }catch ( FirebaseAuthUserCollisionException e){
-                            excep = "Este conta já foi cadastrada";
-                        }catch (Exception e){
-                            excep = "Erro ao cadastrar usuário: "  + e.getMessage();
+                        }
+                        catch (FirebaseAuthInvalidUserException e) {
+                            ex = "Usuário não está cadastrado.";
+                        }
+                        catch (FirebaseAuthInvalidCredentialsException e) {
+                            ex = "E-mail e senha não correspondem a um usuário cadastrado.";
+                        }
+                        catch (Exception e) {
+                            ex = "Erro ao logar usuário: " + e.getMessage();
+                            Log.d("DESESPERO DO LOGIN", "onComplete: " + e);
                             e.printStackTrace();
                         }
-
                         Toast.makeText(MainActivity.this,
-                                excep,
+                                ex,
                                 Toast.LENGTH_SHORT).show();
                     }
                 }

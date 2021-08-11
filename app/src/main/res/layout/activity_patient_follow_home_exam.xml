@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -80,23 +81,6 @@
 
 
                 <TextView
-                    android:id="@+id/followCollector"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:clickable="true"
-                    android:contextClickable="true"
-                    android:linksClickable="false"
-                    android:text="Acompanhar coletor"
-                    android:textColor="@color/vivid_dark_blue"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/collectNumber" />
-
-
-                <TextView
                     android:id="@+id/CollectDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -105,7 +89,7 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/collectNumber"
-                    app:layout_constraintTop_toBottomOf="@+id/followCollector" />
+                    app:layout_constraintTop_toBottomOf="@+id/collectorStateText" />
 
                 <TextView
                     android:id="@+id/pacientDateCollect"
@@ -216,6 +200,28 @@
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/TextView"
                     app:layout_constraintTop_toBottomOf="@+id/pacientName" />
+
+                <ProgressBar
+                    android:id="@+id/collectorStateBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="166dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:max="100"
+                    android:progress="40"
+                    app:layout_constraintTop_toBottomOf="@+id/collectNumber" />
+
+                <TextView
+                    android:id="@+id/collectorStateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Coletor a caminho"
+                    app:layout_constraintEnd_toEndOf="@+id/collectorStateBar"
+                    app:layout_constraintStart_toStartOf="@+id/collectorStateBar"
+                    app:layout_constraintTop_toBottomOf="@+id/collectorStateBar" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

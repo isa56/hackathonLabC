@@ -50,31 +50,36 @@ public class FirebaseUserHelper {
         }
     }
 
-    public static void RedirectLoggedUser(Activity activity) {
+    public static void RedirectLoggedUser(final Activity activity) {
 
+        FirebaseUser user = getCurrentFbUser();
 
-        DatabaseReference usersRef = FirebaseConfig.getFirebaseDatabase().child("users").child(getUserID());
-        usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User user = snapshot.getValue(User.class);
-                String userType = user.getType();
-                if (userType.equals("P")) {  // Paciente
-                    Intent intent = new Intent(activity, MenuPatientActivity.class);
-                    activity.startActivity(intent);
+        if(user != null) {
+
+            DatabaseReference usersRef = FirebaseConfig.getFirebaseDatabase().child("users").child(getUserID());
+            usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot snapshot) {
+                    User user = snapshot.getValue(User.class);
+
+                    String userType = user.getType();
+
+                    if (userType.equals("P")) {  // Paciente
+                        Intent intent = new Intent(activity, MenuPatientActivity.class);
+                        activity.startActivity(intent);
+                    } else if (userType.equals("C")) {   // Coletor
+                        Intent intent = new Intent(activity, MenuCollectorActivity.class);
+                        activity.startActivity(intent);
+                    } else {   // Gestor
+                        Intent intent = new Intent(activity, MenuAdminActivity.class);
+                        activity.startActivity(intent);
+                    }
                 }
-                else if (userType.equals("C")) {   // Coletor
-                    Intent intent = new Intent(activity, MenuCollectorActivity.class);
-                    activity.startActivity(intent);
-                }
-                else {   // Gestor
-                    Intent intent = new Intent(activity, MenuAdminActivity.class);
-                    activity.startActivity(intent);
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {}
-        });
+
+                @Override
+                public void onCancelled(DatabaseError error) {}
+            });
+        }
 
     }
 

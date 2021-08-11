@@ -76,7 +76,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeNameInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="370dp"
+                    android:layout_width="330dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="48dp"
                     android:hint="Nome completo"
@@ -95,7 +95,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeCPFInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="370dp"
+                    android:layout_width="330dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="48dp"
                     android:hint="CPF"
@@ -114,7 +114,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeAddressInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="230dp"
+                    android:layout_width="200dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="48dp"
                     android:hint="Bairro"
@@ -133,7 +133,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeHouseNumInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="116dp"
+                    android:layout_width="100dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="48dp"
                     android:hint="Número"
@@ -152,7 +152,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeStreetInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="370dp"
+                    android:layout_width="330dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="48dp"
                     android:hint="Rua e Complemento"
@@ -172,7 +172,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeCEPInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="370dp"
+                    android:layout_width="330dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="48dp"
                     android:hint="CEP"
@@ -214,7 +214,7 @@
 
                 <Spinner
                     android:id="@+id/homeExamSpinner"
-                    android:layout_width="370dp"
+                    android:layout_width="330dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="32dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -235,7 +235,7 @@
 
                 <Spinner
                     android:id="@+id/homeInsuranceSpinner"
-                    android:layout_width="370dp"
+                    android:layout_width="330dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="32dp"
                     android:visibility="visible"
@@ -248,10 +248,11 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeInsuranceIdInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="370dp"
+                    android:layout_width="330dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="48dp"
                     android:hint="Carteirinha do Convênio"
+                    android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/homeInsuranceSpinner">
@@ -303,10 +304,11 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeInsuranceGuideInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="370dp"
+                    android:layout_width="330dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="32dp"
                     android:hint="Código da Guia Médica"
+                    android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/homeGuiderSwitch">
@@ -323,7 +325,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeInputPhone"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="370dp"
+                    android:layout_width="330dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="48dp"
                     android:hint="Telefone para contato"
@@ -343,7 +345,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeInputDate"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="200dp"
+                    android:layout_width="150dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="48dp"
                     android:hint="Data"
@@ -362,7 +364,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeTimeBeginInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="146dp"
+                    android:layout_width="136dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="28dp"
                     android:hint="Intervalo"
@@ -380,7 +382,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/homeTimeEndInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="146dp"
+                    android:layout_width="136dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
                     android:hint="Intervalo"

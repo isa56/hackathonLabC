@@ -12,14 +12,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputEditText;
 
 import br.com.isa56.hackathonlabcv.R;
+import br.com.isa56.hackathonlabcv.activity.MainActivity;
 import br.com.isa56.hackathonlabcv.model.ClinicExam;
 import br.com.isa56.hackathonlabcv.model.HomeExam;
 
 public class ScheduleClinicExam extends AppCompatActivity {
 
-    private TextInputEditText name, date, time, cep, houseNumber;
+    private TextInputEditText name, date, time, cep, houseNumber, guideCode, insuranceCode;
     private Switch insuranceSw, guideSw;
-    private Spinner exam;
+    private Spinner exam, insuranceChoice;
     private Button confirmExam;
 
     @Override
@@ -27,9 +28,13 @@ public class ScheduleClinicExam extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_schedule_exam);
 
+//        guideCode = findViewById(R.id.exInputInsuranceGuide);
+//        insuranceCode = findViewById(R.id.exInputInsuranceId);
+//        insuranceChoice = findViewById(R.id.exInsuranceSpinner);
+
         name = findViewById(R.id.exInputName);
 
-        date = findViewById(R.id.exInputDate);
+        date = findViewById(R.id.exDateInput);
         time = findViewById(R.id.exInputTime);
 
         cep = findViewById(R.id.exInputCEP);
@@ -41,6 +46,9 @@ public class ScheduleClinicExam extends AppCompatActivity {
         guideSw = findViewById(R.id.exGuiderSwitch);
 
         confirmExam = findViewById(R.id.exConfirmScheduleButton);
+
+        Toast.makeText(ScheduleClinicExam.this, "Tela em desenvolvimento...", Toast.LENGTH_LONG).show();
+
 
     }
 
@@ -94,23 +102,26 @@ public class ScheduleClinicExam extends AppCompatActivity {
     }
 
 
-
+/*
     public boolean verifyIfHasInsurance(){
         if(insuranceSw.isChecked()){
+            insuranceChoice.setVisibility(View.VISIBLE);
+          insuranceCode.setVisibility(View.VISIBLE);
             return true;
         }
         return false;
     }
+*/
 
-
-
+/*
     public boolean verifyIfHasGuide(){
         if(guideSw.isChecked()){
+            guideCode.setVisibility(View.VISIBLE);
             return true;
         }
         return false;
     }
-
+*/
 
 
 }

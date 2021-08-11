@@ -1,6 +1,7 @@
 package br.com.isa56.hackathonlabcv.activity.patient;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ public class ExamResultsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_results);
+        Toast.makeText(ExamResultsActivity.this, "Tela em desenvolvimento...", Toast.LENGTH_LONG).show();
     }
 
 }

@@ -16,9 +16,9 @@ import br.com.isa56.hackathonlabcv.model.HomeExam;
 
 public class ScheduleHomeExam extends AppCompatActivity {
 
-    private TextInputEditText name, date, timeBegin, timeEnd, cep, houseNumber;
+    private TextInputEditText name, date, timeBegin, timeEnd, cep, houseNumber,  insuranceCode, guideCode;
     private Switch insuranceSw, guideSw;
-    private Spinner exam;
+    private Spinner exam, insuranceChoice;
     private Button confirmExam;
 
     @Override
@@ -26,9 +26,13 @@ public class ScheduleHomeExam extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_schedule_home_exam);
 
+//        insuranceChoice = findViewById(R.id.homeInsuranceSpinner);
+//        insuranceCode = findViewById(R.id.homeInsuranceIdInput);
+//        guideCode = findViewById(R.id.homeInsuranceGuideInput);
+
         name = findViewById(R.id.homeInputName);
 
-        date = findViewById(R.id.homeInputDate);
+        date = findViewById(R.id.homeDateInput);
         timeBegin = findViewById(R.id.homeInputTimeBegin);
         timeEnd = findViewById(R.id.homeInputTimeEnd);
 
@@ -41,6 +45,10 @@ public class ScheduleHomeExam extends AppCompatActivity {
         guideSw = findViewById(R.id.homeGuiderSwitch);
 
         confirmExam = findViewById(R.id.homeConfirmHomeScheduleButton);
+
+        Toast.makeText(ScheduleHomeExam.this, "Tela em desenvolvimento...", Toast.LENGTH_LONG).show();
+
+
     }
 
     public void validateExam(View view){
@@ -94,19 +102,30 @@ public class ScheduleHomeExam extends AppCompatActivity {
 
 
 
-
+/*
     public boolean verifyIfHasInsurance(){
         if(insuranceSw.isChecked()){
+//            insuranceChoice.setVisibility(View.VISIBLE);
+//            insuranceCode.setVisibility(View.VISIBLE);
             return true;
         }
-        return false;
-    }
+        else{
+//            insuranceChoice.setVisibility(View.GONE);
+//            insuranceCode.setVisibility(View.GONE);
+            return false;
+        }
+    }*/
+/*
+    public String verifyIfHasGuide(){
 
-    public boolean verifyIfHasGuide(){
-        if(guideSw.isChecked()){
-            return true;
+      if(guideSw.isChecked()){
+//            guideCode.setVisibility(View.VISIBLE);
+            return "V";
         }
-        return false;
-    }
+        else{
+//            guideCode.setVisibility(View.GONE);
+            return "F";
+        }
+    }*/
 
 }
