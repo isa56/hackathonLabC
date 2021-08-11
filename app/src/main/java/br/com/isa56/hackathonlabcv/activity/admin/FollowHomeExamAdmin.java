@@ -3,19 +3,19 @@ package br.com.isa56.hackathonlabcv.activity.admin;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import br.com.isa56.hackathonlabcv.R;
-import br.com.isa56.hackathonlabcv.activity.patient.FollowHomeExamPatient;
 
-public class AdminDataActivity extends AppCompatActivity {
+public class FollowHomeExamAdmin extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_follow_home_exam);
-        Toast.makeText(AdminDataActivity.this, "Tela em desenvolvimento...", Toast.LENGTH_LONG).show();
 
+
+        Toast.makeText(FollowHomeExamAdmin.this, "Tela em desenvolvimento...", Toast.LENGTH_LONG).show();
     }
 }

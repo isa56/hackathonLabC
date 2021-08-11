@@ -68,27 +68,43 @@
     <Button
         android:id="@+id/CollectorNotComplete"
         android:layout_width="166dp"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/salmon"
         android:text="Paciente Ausente"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CollectorSeeOnMap" />
 
     <Button
         android:id="@+id/CollectorFinished"
         android:layout_width="166dp"
-        android:layout_height="130dp"
+        android:layout_height="100dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="@color/vivid_dark_blue"
         android:text="Coleta concluída"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CollectorSeeOnMap" />
+
+    <Button
+        android:id="@+id/CollectorGoingButton"
+        android:layout_width="166dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/vivid_light_blue"
+        android:text="Em rota"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CollectorNotComplete" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

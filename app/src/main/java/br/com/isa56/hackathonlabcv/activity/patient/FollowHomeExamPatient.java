@@ -15,7 +15,7 @@ public class FollowHomeExamPatient extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_follow_home_exam);
-        
+
 
         Toast.makeText(FollowHomeExamPatient.this, "Tela em desenvolvimento...", Toast.LENGTH_LONG).show();
     }

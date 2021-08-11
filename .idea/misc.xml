@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_admin_collector_change.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_admin_data_collector.xml" value="0.12894736842105264" />
+        <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_admin_follow_home_exam.xml" value="0.12894736842105264" />
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_admin_menu.xml" value="0.12894736842105264" />
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_admin_schedule_collector.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_collector_data.xml" value="0.12894736842105264" />
@@ -22,11 +23,12 @@
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_patient_menu.xml" value="0.12894736842105264" />
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_patient_results.xml" value="0.12894736842105264" />
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_patient_schedule_exam.xml" value="0.12894736842105264" />
-        <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_patient_schedule_home_exam.xml" value="0.2" />
+        <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_patient_schedule_home_exam.xml" value="0.1348158443363447" />
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/activity_team_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/item_collectors_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/item_exams_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/item_results_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/isado/AndroidStudioProjects/HackathonLabCV/app/src/main/res/layout/simple_spinner_item.xml" value="0.12894736842105264" />
       </map>
     </option>
   </component>

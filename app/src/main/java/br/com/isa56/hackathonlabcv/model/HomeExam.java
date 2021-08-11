@@ -6,22 +6,32 @@ import br.com.isa56.hackathonlabcv.config.FirebaseConfig;
 
 public class HomeExam {
 
-    private String number, name, date, timeBegin, timeEnd, cep, houseNumber;
+    private String id, name, date, timeBegin, timeEnd, cep, houseNumber, examName;
 
     public HomeExam() {    }
 
     public void saveHomeExam(){
-        DatabaseReference dbRef = FirebaseConfig.getFirebaseDatabase();
-        DatabaseReference homeExams = dbRef.child("homeExams").child(getNumber());
-        homeExams.setValue(this);
+
+        DatabaseReference firebaseRef = FirebaseConfig.getFirebaseDatabase();
+        DatabaseReference homeexams = firebaseRef.child( "homeexams" ).child( getId() );
+
+        homeexams.setValue(this);
     }
 
-    public String getNumber() {
-        return number;
+    public String getExamName() {
+        return examName;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setExamName(String examName) {
+        this.examName = examName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

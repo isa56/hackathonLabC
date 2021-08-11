@@ -67,8 +67,8 @@
                     android:layout_marginTop="8dp"
                     android:text="Só precisamos de alguns dados!"
                     android:textSize="18sp"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView7"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView5"
+                    app:layout_constraintStart_toStartOf="@+id/textView5"
                     app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                 <!-- Formulário: -->
@@ -367,7 +367,7 @@
                     android:layout_width="126dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="48dp"
-                    android:hint="Intervalo"
+                    android:hint="Horário"
                     app:layout_constraintEnd_toEndOf="@+id/exInputPhone"
                     app:layout_constraintTop_toBottomOf="@+id/exInputPhone">
 
@@ -386,6 +386,7 @@
                     android:layout_marginTop="64dp"
                     android:layout_marginBottom="64dp"
                     android:text="Confirmar Agendamento"
+                    android:onClick="validateClinicExam"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

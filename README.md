@@ -63,9 +63,6 @@ Devido ao curto tempo disponível, não será possível que todas as funções s
 * Cadastro e login;
 * Sincronização do cadastro e login com banco de dados (Firebase Realtime Database);
   * Para fins de demonstração e segurança, os únicos dados armazenados no momento são nome, e-mail e senha.
-* ~~Atualização da posição por botão do coletor para o usuário e gestor;~~
-* ~~Envio de notificações ao se aproximar do local do usuário;~~
-* ~~Sincronização da marcação de exames com banco de dados (Firebase Realtime Database);~~
 
 ## Integrantes do grupo: Equipe 2 - Cheetah:
 
@@ -73,7 +70,7 @@ Grupo formado aleatoriamente no Hackathon. Nenhum dos participantes se conhecia 
 
 * **UX Design:** [Danielle Mattos de Sousa](https://www.linkedin.com/in/danielle-mattos-de-sousa-975672209/);
 * **Desenvolvimento:** [Isadora Gonçalves Ferreira](https://www.linkedin.com/in/isadorafer/);
-* **Negócios:** [João Anjos](https://www.linkedin.com/in/joão-lucas-dos-anjos-9828b1193).
+* **Negócios:** [João Lucas dos Anjos](https://www.linkedin.com/in/joão-lucas-dos-anjos-9828b1193).
 
 ### Mentores:
 

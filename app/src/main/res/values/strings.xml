@@ -1,4 +1,34 @@
 <resources>
     <string name="app_name">Hackathon Lab CV</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+    <string-array name="exams_data">
+        <item>EXAMES</item>
+        <item>11 DESOXICORTISOL</item>
+        <item>11 DESOXICORTISOL APOS CORTROSINA</item>
+        <item>17 ALFA HIDROXI PREGNENOLONA</item>
+        <item>17 ALFA HIDROXIPROGESTERONA</item>
+        <item>17 BETA ESTRADIOL</item>
+        <item>17 CETOSTEROIDES NEUTROS TOTAIS</item>
+        <item>17 HIDROXIESTEROIDES</item>
+        <item>18 HIDROXICORTICOSTERONA</item>
+        <item>2,5 HEXANODIONA NA URINA</item>
+        <item>25 HIDROXIVITAMINA D</item>
+        <item>3 ALFA ANDROSTANEDIOL GLICURONIDE</item>
+        <item>5 HIDROXITRIPTOFANO</item>
+        <item>5 NUCLEOTIDASE</item>
+        <item>AC.ANTI ANIDRASE CARBONICA</item>
+        <item>ACETONA, DOSAGEM</item>
+        <item>HEMOGRAMA</item>
+    </string-array>
+
+    <string-array name="insurance_data">
+        <item>CONVÊNIOS</item>
+        <item>CONVENIO #1</item>
+        <item>CONVENIO #2</item>
+        <item>CONVENIO #3</item>
+        <item>CONVENIO #4</item>
+        <item>CONVENIO #5</item>
+    </string-array>
+
 </resources>

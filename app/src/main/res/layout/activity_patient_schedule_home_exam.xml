@@ -291,8 +291,8 @@
 
                 <TextView
                     android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="108dp"
+                    android:layout_height="57dp"
                     android:layout_marginStart="16dp"
                     android:text="Possui Guia Médica"
                     android:textSize="16sp"
@@ -365,8 +365,8 @@
                     android:id="@+id/homeTimeBeginInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="136dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="48dp"
                     android:hint="Intervalo"
                     app:layout_constraintEnd_toEndOf="@+id/homeInputPhone"
                     app:layout_constraintTop_toBottomOf="@+id/homeInputPhone">
@@ -383,8 +383,8 @@
                     android:id="@+id/homeTimeEndInput"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="136dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="8dp"
                     android:hint="Intervalo"
                     app:layout_constraintEnd_toEndOf="@+id/homeTimeBeginInput"
                     app:layout_constraintTop_toBottomOf="@+id/homeTimeBeginInput">
@@ -405,6 +405,7 @@
                     android:layout_marginBottom="64dp"
                     android:text="Confirmar Agendamento Domiciliar"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    android:onClick="validateHomeExam"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/homeTimeEndInput" />
