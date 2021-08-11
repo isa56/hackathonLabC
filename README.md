@@ -81,55 +81,92 @@ Devido ao curto tempo disponível, não será possível que todas as funções s
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/01login.png" alt="Tela de Login" style="zoom: 15%;" />
 
+
+
+
 * Tela para Criar Conta:
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/02criarconta.png" alt="Tela para Criar Conta" style="zoom:15%;" />
+
+
+
 
 * Tela de Menu - Paciente:
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/03pacientemenu.png" alt="Tela de Menu - Paciente" style="zoom:15%;" />
 
+
+
+
 * Tela de Resultados - Paciente:
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/04pacienteresultados.png" alt="Tela de Resultados - Paciente" style="zoom:15%;" />
+
+
+
 
 * Tela de Marcação de Exames - Paciente:
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/05agendar1.png" alt="Tela de Marcação de Exames - Paciente 1" style="zoom:15%;" />
 
-  
 
-  
+
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/06agendar2.png" alt="Tela de Marcação de Exames - Paciente 2" style="zoom:15%;" />
+
+
+
+
 
 * Tela de Acompanhamento do Coletor - Paciente:
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/10gestordados.png" alt="Tela de Acompanhamento do Coletor - Paciente" style="zoom:15%;" />
 
+
+
+
+
 * Tela de Menu - Coletor:
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/07coletormenu.png" alt="Tela de Menu - Coletor" style="zoom:15%;" />
+
+
+
+
 
 * Tela de Dados - Coletor:
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/08coletordados.png" alt="Tela de Dados - Coletor" style="zoom:15%;" />
 
+
+
+
+
 * Tela de Menu - Gestor:
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/09gestormenu.png" alt="Tela de Menu - Gestor" style="zoom:15%;" />
+
+
+
+
 
 * Tela de Dados - Gestor:
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/10gestordados.png" alt="Tela de Dados - Gestor" style="zoom:15%;" />
 
-  
+
+
+
+ 
 
 * Banco de Dados:
 
   <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/screenshots/11bancodedados.png" alt="Banco de Dados" style="zoom:15%;" />
 
-  
+
+
+
+ 
 
 ## Integrantes do grupo: Equipe 2 - Cheetah:
 
@@ -139,12 +176,11 @@ Grupo formado aleatoriamente no Hackathon. Nenhum dos participantes se conhecia 
 * **Desenvolvimento:** [Isadora Gonçalves Ferreira](https://www.linkedin.com/in/isadorafer/);
 * **Negócios:** [João Lucas dos Anjos](https://www.linkedin.com/in/joão-lucas-dos-anjos-9828b1193).
 
+
 ### Mentores:
 
 * UX Design: João Torman;
-
 * Desenvolvimento: Leandro Wong;
-
 * Negócios: Leonardo Frossard.
 
   ![Logo Laboratório Côrtes Villela Grande](https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/institucional/logolabc.png)
