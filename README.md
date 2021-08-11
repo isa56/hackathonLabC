@@ -35,6 +35,36 @@ Protótipo de **aplicativo** nativo para **Android** que reúne essas informaç�
 
 Devido ao curto tempo disponível, não será possível que todas as funções sejam implementadas. Apesar disso, há ideias para trazer a localização em tempo real dos coletores para os gestores e pacientes. Melhorar, também, o acesso às informações sobre os exames.
 
+## Como utilizar?
+
+1. Em um celular Android, instale o arquivo (apk)[] disponível para (download)[].
+2. Faça registro e entre em sua conta.
+3. Aproveite!
+
+*Observações:*
+
+* As telas que não estiverem terminadas terão um aviso (estarão em Mockup).
+* Nem todas as funcionalidades estão disponíveis.
+* Foram criadas contas padrão para login:
+  * Paciente:
+    * E-mail (não funcional): paciente@gmail.com
+    * Senha: paciente
+  * Coletor:
+    * E-mail (não funcional): coletor@gmail.com
+    * Senha: coletor
+  * Gestor:
+    * E-mail (não funcional): adminteste@gmail.com
+    * Senha: admin1122
+
+## Partes funcionais:
+
+* Activities (telas) e chamadas para activities (telas);
+* Cadastro e login;
+* Sincronização do cadastro e login com banco de dados (Firebase Realtime Database);
+* ~~Atualização da posição por botão do coletor para o usuário e gestor;~~
+* ~~Envio de notificações ao se aproximar do local do usuário;~~
+* ~~Sincronização da marcação de exames com banco de dados (Firebase Realtime Database);~~
+
 ## Integrantes do grupo: Equipe 2 - Cheetah:
 
 Grupo formado aleatoriamente no Hackathon. Nenhum dos participantes se conhecia anteriormente.
