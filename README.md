@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/isa56/hackathonLabC/main/docshackathon/institucional/logoativo.png" alt="Logo Laboratório Côrtes Villela Simples" style="zoom:5%;" /> Hackathon Laboratório Côrtes Villela
+# Hackathon Laboratório Côrtes Villela
 
 Agosto/2021.
 
