@@ -1,5 +1,5 @@
 
-# Hackathon Laboratório Côrtes Villela
+# <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\institucional\logoativo.png" alt="Logo Laboratório Côrtes Villela Simples" style="zoom:5%;" /> Hackathon Laboratório Côrtes Villela
 
 Agosto/2021.
 
@@ -8,6 +8,8 @@ Agosto/2021.
 O Hackathon é organizado pelo [Laboratório Côrtes Villela](https://www.cortesvillela.com.br/) e pelo [Centro Regional de Inovação e Transferência de Tecnologia - CRITT (UFJF)](https://www2.ufjf.br/critt/);
 A ideia inicial é de buscar soluções na **área da saúde e logística**, com foco na *automação de rotas e melhorias da experiência do usuário* dos serviços do Laboratório.
 Buscar formas de otimizar custos relacionados a exames domiciliares e cadastro de pacientes.
+
+
 
 
 ## O projeto:
@@ -35,9 +37,11 @@ Protótipo de **aplicativo** nativo para **Android** que reúne essas informaç�
 
 Devido ao curto tempo disponível, não será possível que todas as funções sejam implementadas. Apesar disso, há ideias para trazer a localização em tempo real dos coletores para os gestores e pacientes. Melhorar, também, o acesso às informações sobre os exames.
 
+
+
 ## Como utilizar?
 
-1. Em um celular Android, instale o arquivo [apk]() disponível para [download](). Se não sabe instalar, [este guia pode te ajudar](https://www.techtudo.com.br/dicas-e-tutoriais/2018/10/como-instalar-apk-no-android.ghtml).
+1. Em um celular Android 8.0 ou acima, instale o arquivo [apk]() disponível para [download](). Se não sabe instalar, [este guia pode te ajudar](https://www.techtudo.com.br/dicas-e-tutoriais/2018/10/como-instalar-apk-no-android.ghtml).
    * O aplicativo é completamente seguro, não há nenhum tipo de vírus. As únicas bibliotecas utilizadas são do próprio [Android](https://developer.android.com/?hl=pt-br), do [Firebase](https://firebase.google.com/?hl=pt) e do [Material Design](https://material.io/).
 2. Faça registro e entre em sua conta.
 3. Aproveite!
@@ -55,7 +59,10 @@ Devido ao curto tempo disponível, não será possível que todas as funções s
     * Senha: coletor
   * Gestor:
     * E-mail (não funcional): adminteste@gmail.com
+    
     * Senha: admin1122
+    
+      
 
 ## Partes funcionais:
 
@@ -63,6 +70,56 @@ Devido ao curto tempo disponível, não será possível que todas as funções s
 * Cadastro e login;
 * Sincronização do cadastro e login com banco de dados (Firebase Realtime Database);
   * Para fins de demonstração e segurança, os únicos dados armazenados no momento são nome, e-mail e senha.
+
+## Imagens das Telas do Aplicativo:
+
+* Tela de Login:
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\01login.png" alt="Tela de Login" style="zoom: 15%;" />
+
+* Tela para Criar Conta:
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\02criarconta.png" alt="Tela para Criar Conta" style="zoom:15%;" />
+
+* Tela de Menu - Paciente:
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\03pacientemenu.png" alt="Tela de Menu - Paciente" style="zoom:15%;" />
+
+* Tela de Resultados - Paciente:
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\04pacienteresultados.png" alt="Tela de Resultados - Paciente" style="zoom:15%;" />
+
+* Tela de Marcação de Exames - Paciente:
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\05agendar1.png" alt="Tela de Marcação de Exames - Paciente 1" style="zoom:15%;" />
+
+  
+
+  
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\06agendar2.png" alt="Tela de Marcação de Exames - Paciente 2" style="zoom:15%;" />
+
+* Tela de Acompanhamento do Coletor - Paciente:
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\10gestordados.png" alt="Tela de Acompanhamento do Coletor - Paciente" style="zoom:15%;" />
+
+* Tela de Menu - Coletor:
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\07coletormenu.png" alt="Tela de Menu - Coletor" style="zoom:15%;" />
+
+* Tela de Dados - Coletor:
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\08coletordados.png" alt="Tela de Dados - Coletor" style="zoom:15%;" />
+
+* Tela de Menu - Gestor:
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\09gestormenu.png" alt="Tela de Menu - Gestor" style="zoom:15%;" />
+
+* Tela de Dados - Gestor:
+
+  <img src="C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\screenshots\10gestordados.png" alt="Tela de Dados - Gestor" style="zoom:15%;" />
+
+  
 
 ## Integrantes do grupo: Equipe 2 - Cheetah:
 
@@ -75,6 +132,10 @@ Grupo formado aleatoriamente no Hackathon. Nenhum dos participantes se conhecia 
 ### Mentores:
 
 * UX Design: João Torman;
+
 * Desenvolvimento: Leandro Wong;
+
 * Negócios: Leonardo Frossard.
+
+  ![Logo Laboratório Côrtes Villela Grande](C:\Users\isado\AndroidStudioProjects\HackathonLabCV\docshackathon\institucional\logolabc.png)
 

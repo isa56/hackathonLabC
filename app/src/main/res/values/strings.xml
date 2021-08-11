@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hackathon Lab CV</string>
+    <string name="app_name">Laboratório Côrtes Villela - Projeto Hackathon Cheetah</string>
     <string name="title_activity_maps">MapsActivity</string>
 
     <string-array name="exams_data">
